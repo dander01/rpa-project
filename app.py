@@ -125,14 +125,14 @@ def create_invoice(invoice_num,order_data,directory):
 
 create_invoice(invoice_num,order_data,directory)
 
-
-
 # INSERT ANSWER FOR QUESTION 5 HERE
+
+gmail_password_path = select_file('Please select the gmail password file')
+gmail_password = open(gmail_password_path).read()
 
 def send_email(invoice_num, name, email, date, directory):
     gmail_user = email
-    gmail_password_path = select_file('Please select the gmail password file')
-    gmail_password = open(gmail_password_path).read()
+    
     
     # List of recipients
 
@@ -182,8 +182,7 @@ def send_email(invoice_num, name, email, date, directory):
     mail_server.quit()
 
 send_email(invoice_num,name,email,date,directory)
-
-
+    
 # INSERT ANSWER FOR QUESTION 6 HERE
 filenames1 = os.listdir()
 filenames = sorted(filenames1)
