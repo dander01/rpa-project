@@ -58,9 +58,9 @@ product_prices
 
 order_data = {}
 
-def get_order_data(invoice_num,file,directory):
+def get_order_data(invoice_num,filenames,directory):
     
-    template = openpyxl.load_workbook(directory+file)
+    template = openpyxl.load_workbook(directory+filenames)
     selected_sheet = template['OrderForm']
 
     name = selected_sheet['C14'].value
